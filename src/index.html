@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Izipay</title>
+
+  <link rel="stylesheet" href="/css/styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+
+<div class="signupFrm">
+  
+  <div class="Iam">
+    <div style="margin-left: 0px; color: #FF4240; font: normal 30px Montserrat, sans-serif; color: #999;">
+      <h2>Ejemplo de un formulario en:</h2>
+    </div>
+    <b>
+      <div class="innerIam">
+        Redirección con JavaScript <img src="../Image/imagenes-readme/js.png"><br /> 
+        Redirección con JavaScript <img src="../Image/imagenes-readme/js.png"><br /> 
+        Redirección con JavaScript <img src="../Image/imagenes-readme/js.png"><br />        
+        <br />
+      </div>
+    </b>    
+  </div>
+
+  <form class="form" name="formulario" method="POST" action="https://secure.micuentaweb.pe/vads-payment/">    
+
+    <div style="margin-bottom: 20px; text-align: center;">
+          <img src="../Image/logo_izipay.png">
+    </div>  
+      
+    <div class="inputContainer">
+      <input id="campo1" type="text" class="input" placeholder="" name="vads_action_mode" value="INTERACTIVE" readonly />             
+      <label for="" class="label">vads_action_mode</label>
+    </div>
+
+    <div class="inputContainer">
+      <input id="campo2" type="text" class="input" placeholder="" name="vads_amount" value="" />             
+      <label for="" class="label">vads_amount / (MONTO A PAGAR)</label>
+    </div>
+
+    <div class="inputContainer">
+      <input id="campo3" type="text" class="input" placeholder="" name="vads_ctx_mode" value="TEST" readonly/>             
+      <label for="" class="label">vads_ctx_mode</label>
+    </div>
+
+    <div class="inputContainer">
+      <input id="campo4" type="text" class="input" placeholder="" name="vads_currency" value="604" readonly />             
+      <label for="" class="label">vads_currency / (MONEDA DE PAGO)</label>
+    </div>
+
+    <div class="inputContainer">
+      <input id="campo5" type="text" class="input" placeholder="" name="vads_page_action" value="PAYMENT" readonly/>             
+      <label for="" class="label">vads_page_action</label>
+    </div>
+
+    <div class="inputContainer">
+      <input id="campo6" type="text" class="input" placeholder="" name="vads_payment_config" value="SINGLE" readonly/>             
+      <label for="" class="label">vads_payment_config</label>
+    </div>
+
+    <div class="inputContainer">
+      <input id="campo7" type="text" class="input" placeholder="" name="vads_site_id" value="~~CHANGE_ME_id~~" readonly />             
+      <label for="" class="label">vads_site_id / (CODIGO DE LA TIENDA)</label>
+    </div>
+
+    <div class="inputContainer">
+      <input id="campo8" type="text" class="input" placeholder="" name="vads_trans_date" value="" readonly />             
+      <label for="" class="label">vads_trans_date / (FECHA DE PAGO UTC)</label>
+    </div>
+
+    <div class="inputContainer">
+      <input id="campo9" type="text" class="input" placeholder="" name="vads_trans_id" value="" />             
+      <label for="" class="label">vads_trans_id / (ORDEN DE PAGO)</label>
+    </div>
+
+    <div class="inputContainer">
+      <input id="campo10" type="text" class="input" placeholder="" name="vads_version" value="V2" readonly/>             
+      <label for="" class="label">vads_version / (VERSION)</label>
+    </div>   
+    
+    <div class="inputContainer">
+      <input id="campo11" type="text" class="input" placeholder="" name="signature" value="" readonly/>             
+      <label for="" class="label">signature / (FIRMA EN BASE 64)</label>
+    </div>
+
+    <input id="key" type="hidden" value="~~CHANGE_ME_key~~" />  
+   
+    <input class="submitBtn" onClick="javascript:procesar();" type="submit" name="pagar" value="PAGAR"/>
+    
+  </form>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/crypto-js.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/hmac-sha256.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.9-1/enc-base64.min.js"></script>
+
+  <script src="../js/formulario.js"></script>  
+</div>
+  
+</body>
+</html>
+
+
+
